@@ -19,3 +19,9 @@ sudo apt -y install git
 
 # Python 
 sudo apt -y install python3-pip
+
+# Docker
+sudo apt -y install docker
+
+
+echo "finished installation"

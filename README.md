@@ -1,2 +1,2 @@
 # install
-Convinience install script for common ubuntu packages
+Convenience install script for common ubuntu packages

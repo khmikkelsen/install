@@ -35,5 +35,6 @@ sudo snap install discord
 # Hardinfo 
 sudo apt install -y hardinfo
 
-
+# Netstat
+sudo apt install -y netstat
 

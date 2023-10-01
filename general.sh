@@ -22,6 +22,7 @@ rm jetbrains-toolbox.tar.gz
 
 # Git
 sudo apt -y install git
+sudo apt -y install git-lfs
 
 # Python 
 sudo apt -y install python3-pip

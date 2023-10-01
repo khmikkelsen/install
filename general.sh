@@ -1,5 +1,16 @@
 #!/bin/bash
 
+echo Is the current machine a desktop? Answer y/n
+read answer
+
+if [["$answer" == "y"]]; then
+	is_desktop = true
+elif [["$answer" == "n"]]; then
+	is_desktop = false
+else
+	echo "Invalid response, aborting"
+	exit 0
+fi
 
 # Setup
 sudo apt update
@@ -32,11 +43,24 @@ sudo apt -y install python3-pip
 # Docker
 sudo apt -y install docker
 
+
 # Discord
 sudo snap install discord
 
 # Hardinfo 
 sudo apt install -y hardinfo
 
+# Network
+sudo apt install -y net-tools
+sudo apt install -y nmap
 
+# FTP & SSH setup
+sudo apt install -y openssh-server
+sudo apt ufw allow ssh
 
+# Visual Studio Code
+sudo snap install --classic code
+
+# nodejs
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs

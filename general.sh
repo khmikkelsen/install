@@ -27,6 +27,7 @@ sudo apt -y install git-lfs
 curl -L https://aka.ms/gcm/linux-install-source.sh | sh
 git-credential-manager configure
 git pull.rebase false origin master
+git config --global credential.credentialStore cache
 git config credential.helper 'cache'
 
 # Python 

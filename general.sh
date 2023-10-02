@@ -1,21 +1,11 @@
 #!/bin/bash
 
-echo Is the current machine a desktop? Answer y/n
-read answer
-
-if [["$answer" == "y"]]; then
-	is_desktop = true
-elif [["$answer" == "n"]]; then
-	is_desktop = false
-else
-	echo "Invalid response, aborting"
-	exit 0
-fi
-
 # Setup
 sudo apt update
 timedatectl set-local-rtc 1 --adjust-system-clock # make Ubuntu use local time for dual boot
 xdg-user-dirs-update --set DOWNLOAD ~/downloads
+
+sudo apt install curl
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
